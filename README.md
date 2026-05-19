@@ -2,7 +2,7 @@
 
 # 🛡️ BlackAV — Adversarial Security Evolution Engine
 
-**An open-source, self-improving AI antivirus + firewall that fights a GAN attacker and hardens itself automatically.**
+**An open-source, self-improving AI cybersecurity engine that fights a GAN attacker and hardens itself automatically.**
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)](https://www.python.org/)
 [![PyTorch Lightning](https://img.shields.io/badge/PyTorch_Lightning-2.x-purple?logo=lightning)](https://lightning.ai/)
@@ -23,7 +23,7 @@
 
 BlackAV is an **adversarial machine learning system** for endpoint protection. It trains a **Blue neural network detector** to identify malware, network intrusions, and OS-level vulnerabilities — while a **Red GAN (WGAN-GP)** continuously tries to bypass it. The result is a **provably robust** detector that remains effective even against adaptive, AI-generated attacks.
 
-Unlike conventional signature-based AV engines that fail against zero-day threats, BlackAV learns from adversarial pressure. Each time the Red GAN crafts a new evasion, the Blue detector adapts — a closed loop that produces a model hardened against the worst-case attacker.
+Unlike conventional signature-based cybersecurity engines that fail against zero-day threats, BlackAV learns from adversarial pressure. Each time the Red GAN crafts a new evasion, the Blue detector adapts — a closed loop that produces a model hardened against the worst-case attacker.
 
 ### Key Principles
 
@@ -55,7 +55,7 @@ Unlike conventional signature-based AV engines that fail against zero-day threat
 | 💀 GAN evasion rate | **0.15%** | Red GAN success after adversarial training |
 | ⏱️ Training time (CPU) | **~12 minutes** | Unified multi-layer training pass |
 
-> **Research context**: An adversarial detection rate of 99.85% against a trained WGAN-GP attacker places BlackAV at the frontier of adversarial ML for security. Most production AV systems are not trained adversarially at all.
+> **Research context**: An adversarial detection rate of 99.85% against a trained WGAN-GP attacker places BlackAV at the frontier of adversarial ML for security. Most production cybersecurity systems are not trained adversarially at all.
 
 ---
 
@@ -75,7 +75,7 @@ The system consists of three interacting components: a **Blue Detector**, a **Re
           │   ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  │
           │   │ Binary Layer │  │Network Layer │  │  OS Layer    │  │
           │   │ PE/ELF/APK   │  │ CIC-IDS/     │  │ NVD CVE      │  │
-          │   │ (13 features)│  │ Suricata     │  │ fingerprint  │  │
+          │   │ (13 features)│  │ Suricata      │  │ fingerprint  │  │
           │   │              │  │ (76 features)│  │ (10 features)│  │
           │   └──────────────┘  └──────────────┘  └──────────────┘  │
           │              Feature concat → MLP → [Benign / Malicious] │
@@ -292,7 +292,7 @@ crontab -e
 # 0 * * * * /path/to/venv/bin/python /path/to/adversarial_evo/scripts/retrain_live.py >> /var/log/blackav_retrain.log 2>&1
 ```
 
-Your AI antivirus + firewall is now **live and self-improving**. 🛡️
+Your AI cybersecurity system is now **live and self-improving**. 🛡️
 
 ---
 
