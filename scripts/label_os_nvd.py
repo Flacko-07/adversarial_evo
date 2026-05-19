@@ -13,7 +13,7 @@ import time
 import requests
 
 # --- Configuration ---
-NVD_API_KEY = os.getenv("NVD_API_KEY", "793dc704-cee4-48ef-a2b0-1522d4767f55")
+NVD_API_KEY = os.getenv("NVD_API_KEY", "")
 NVD_BASE_URL = "https://services.nvd.nist.gov/rest/json/cves/2.0"
 # CPE mapping for Windows 10/11 builds (example)
 WINDOWS_CPE_TEMPLATE = "cpe:2.3:o:microsoft:windows_10:{version}:*:*:*:*:*:*:*"
