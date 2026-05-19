@@ -1,0 +1,27 @@
+defaults:
+  - detector: mlp
+  - gan: wgan_gp
+  - loop: default
+  - _self_
+seed: 42
+data:
+  csv_dir: ./data/cic_ids2017          # all CSVs now live here
+  eve_path: null
+  batch_size: 2048                      # larger dataset benefits from larger batches
+  num_workers: 8
+  pin_memory: false
+trainer:
+  accelerator: cpu
+  devices: 1
+  precision: 32
+  max_epochs: 30
+  log_every_n_steps: 10
+  enable_progress_bar: true
+
+detector:
+  model:
+    _target_: src.detector.model.DetectorMLP
+    input_dim: 79                      # CIC-IDS2017 has 79 features
+    hidden_dims: [256, 128, 64]
+    dropout: 0.3
+  lr: 0.001

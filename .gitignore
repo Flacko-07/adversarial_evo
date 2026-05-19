@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+advsec-gpu/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Project specific
+data/*.csv
+!data/labeled_os_fingerprints.csv
+!data/os_fingerprints.csv
+
+data/cic_ids2017/
+!data/cic_ids2017/.gitkeep
+
+*.pcap
+*.pcapng
+logs/
+checkpoints/
+lightning_logs/
+outputs/
+evolution_history.csv
+unified_detector.ckpt
+
+# Windows crap
+Zone.Identifier
+:Zone.Identifier

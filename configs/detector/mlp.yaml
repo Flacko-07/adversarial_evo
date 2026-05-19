@@ -1,0 +1,6 @@
+model:
+  _target_: src.detector.model.DetectorMLP
+  input_dim: 76
+  hidden_dims: [512, 256, 128, 64]      # deeper network
+  dropout: 0.6
+lr: 0.0003

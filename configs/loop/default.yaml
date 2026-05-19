@@ -1,0 +1,5 @@
+n_cycles: 15
+adv_samples_per_cycle: 200000            # ~2% of ~2.8M samples
+retrain_detector_epochs: 50
+retrain_gan_epochs: 500
+anti_weight_boost: 0.3
